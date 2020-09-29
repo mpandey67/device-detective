@@ -11,7 +11,7 @@ RUN-->
 pip3 install --pre scapy[complete]
 
 ## TO RUN THE PROGRAM:
-git clone 
+git clone https://github.com/mpandey67/device-detective.git
 
 cd /device-detective
 
