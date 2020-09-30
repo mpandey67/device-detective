@@ -3,6 +3,10 @@ import subprocess
 def get_ip_addr():
     ifconfig_output=subprocess.check_output(["ifconfig"])
     lhost=re.search(r"\W*(inet)W*\s\d\d\d.\d\d\d.\d[0-9]*.",str(ifconfig_output))
+    if not lhost:
+        print("\ncheck your internet connection. CONNECT TO A NETWORK")
+        print("EXITING...")
+        exit()
     lhost = lhost.group(0).strip(' ')
     lhost = lhost[5:]
     lhost = lhost + "1/24"
