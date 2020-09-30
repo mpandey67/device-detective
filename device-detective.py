@@ -2,6 +2,8 @@
 from scan_print import scan
 from get_ip import get_ip_addr
 from intro import intr
+import subprocess
+subprocess.call("clear",shell=True)
 intr()
 lhost=get_ip_addr()
 
